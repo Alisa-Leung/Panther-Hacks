@@ -1,7 +1,11 @@
 :root{
+    /*colors*/
     --black: #2b162f;
     --white: #f8eedf;
     --red1: #c41d1d;
     --red2:#8E1616;
     --red3:#521818;
+}
+#navBar{
+    background-color: var(--red1);
 }
