@@ -5,6 +5,22 @@
     --red1: #c41d1d;
     --red2:#8E1616;
     --red3:#521818;
+    
+    /*sizing*/
+    --sm: 8px;
+    --md: 16px;
+    --lg: 20px;
+    --xl: 30px;
+    --xxl: 40px;
+    --xxxl: 90px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--white);
 }
 #navBar{
     background-color: var(--red1);
