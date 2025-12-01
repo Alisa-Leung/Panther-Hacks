@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Panther Hacks</title>
-        <link rel="shortcut icon" type="image/png" href="images/redLogo.png"/>
+        <link rel="shortcut icon" type="image/png" href="images/squareLogo.png"/>
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,9 +12,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Courier+New&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div>
+        <div id="navBarContainer">
             <ul id="navBar">
-                <li><img href="images/whiteLogo.png"></li>
+                <li><a href="index.html"><img id="navLogo" src="images/offWhiteLogo.png"></a></li>
                 <li><a id="navLink" href="#home">Home</a></li>
                 <li><a id="navLink" href="#logistics">Logistics</a></li>
                 <li><a id="navLink" href="#team">Team</a></li>
@@ -23,82 +23,85 @@
                 <li><a id="navLink" href="#faq">FAQ</a></li>
             </ul>
         </div>
-        <div id="home">
-            <h1>Welcome to Panther Hacks.</h1>
-            <p>Panther Hacks is a hackathon being hosted at <a href="https://www.google.com/maps/place/Burlingame+High+School/@37.5822871,-122.3493618,17z/data=!3m1!4b1!4m6!3m5!1s0x808f9df2e05d6993:0x95ac832b0ff50c62!8m2!3d37.5822871!4d-122.3467869!16s%2Fm%2F026dq5m?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D">Burlingame High School</a> on February 21st, 2026.</p>
-        </div>
-        <div id="logistics">
-            <div class="scheduleItem">
-                <h3 class="time">7:00-8:00</h3>
-                <h2 class="scheduleEvent">Check-In & Breakfast</h2>
+        <main>
+            <div id="home">
+                <h1>Welcome to Panther Hacks.</h1>
+                <p>Panther Hacks is a hackathon being hosted at <a href="https://www.google.com/maps/place/Burlingame+High+School/@37.5822871,-122.3493618,17z/data=!3m1!4b1!4m6!3m5!1s0x808f9df2e05d6993:0x95ac832b0ff50c62!8m2!3d37.5822871!4d-122.3467869!16s%2Fm%2F026dq5m?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D">Burlingame High School</a> on February 21st, 2026.</p>
             </div>
-            <div class="scheduleItem">
-                <h3 class="time">8:00-8:15</h3>
-                <h2 class="scheduleEvent">Opening Ceremony & Theme Announced</h2>
+            <div id="logistics">
+                <div class="scheduleItem">
+                    <h3 class="time">7:00-8:00</h3>
+                    <h2 class="scheduleEvent">Check-In & Breakfast</h2>
+                </div>
+                <div class="scheduleItem">
+                    <h3 class="time">8:00-8:15</h3>
+                    <h2 class="scheduleEvent">Opening Ceremony & Theme Announced</h2>
+                </div>
+                <div class="scheduleItem">
+                    <h3 class="time">8:15-9:00</h3>
+                    <h2 class="scheduleEvent">Hacking Time</h2>
+                </div>
+                <div class="scheduleItem">
+                    <h3 class="time">9:00-10:00</h3>
+                    <h2 class="scheduleEvent">Workshop 1</h2>
+                </div>
+                <div class="scheduleItem">
+                    <h3 class="time">10:00-12:00</h3>
+                    <h2 class="scheduleEvent">Hacking Time</h2>
+                </div>
+                <div class="scheduleItem">
+                    <h3 class="time">12:00-1:00</h3>
+                    <h2 class="scheduleEvent">Lunch</h2>
+                </div>
+                <div class="scheduleItem">
+                    <h3 class="time">1:00-2:00</h3>
+                    <h2 class="scheduleEvent">Workshop 2</h2>
+                </div>
+                <div class="scheduleItem">
+                    <h3 class="time">2:00-5:00</h3>
+                    <h2 class="scheduleEvent">Hacking Time</h2>
+                </div>
+                <div class="scheduleItem">
+                    <h3 class="time">5:00-7:00</h3>
+                    <h2 class="scheduleEvent">Project Presentations & Judging</h2>
+                </div>
+                <div class="scheduleItem">
+                    <h3 class="time">7:00-7:45</h3>
+                    <h2 class="scheduleEvent">Judge Deliberation & Dinner</h2>
+                </div>
+                <div class="scheduleItem">
+                    <h3 class="time">7:45-8:00</h3>
+                    <h2 class="scheduleEvent">Closing Ceremony</h2>
+                </div>
             </div>
-            <div class="scheduleItem">
-                <h3 class="time">8:15-9:00</h3>
-                <h2 class="scheduleEvent">Hacking Time</h2>
-            </div>
-            <div class="scheduleItem">
-                <h3 class="time">9:00-10:00</h3>
-                <h2 class="scheduleEvent">Workshop 1</h2>
-            </div>
-            <div class="scheduleItem">
-                <h3 class="time">10:00-12:00</h3>
-                <h2 class="scheduleEvent">Hacking Time</h2>
-            </div>
-            <div class="scheduleItem">
-                <h3 class="time">12:00-1:00</h3>
-                <h2 class="scheduleEvent">Lunch</h2>
-            </div>
-            <div class="scheduleItem">
-                <h3 class="time">1:00-2:00</h3>
-                <h2 class="scheduleEvent">Workshop 2</h2>
-            </div>
-            <div class="scheduleItem">
-                <h3 class="time">2:00-5:00</h3>
-                <h2 class="scheduleEvent">Hacking Time</h2>
-            </div>
-            <div class="scheduleItem">
-                <h3 class="time">5:00-7:00</h3>
-                <h2 class="scheduleEvent">Project Presentations & Judging</h2>
-            </div>
-            <div class="scheduleItem">
-                <h3 class="time">7:00-7:45</h3>
-                <h2 class="scheduleEvent">Judge Deliberation & Dinner</h2>
-            </div>
-            <div class="scheduleItem">
-                <h3 class="time">7:45-8:00</h3>
-                <h2 class="scheduleEvent">Closing Ceremony</h2>
-            </div>
-        </div>
-        <div id="team">
+            <div id="team">
 
-        </div>
-        <div id="sponsors">
+            </div>
+            <div id="sponsors">
 
-        </div>
-        <div id="judging">
-            <div class="criteria">
-                <h2 class="criteriaTitle">Creativity</h2>
-                <p>How well your project demonstrates innovation outside the norm</p>
             </div>
-            <div class="criteria">
-                <h2 class="criteriaTitle">Technicality</h2>
-                <p>How well your project demonstrates quality design and structure, as well as how well presenters demonstrate an understanding of said structure</p>
+            <div id="judging">
+                <div class="criteria">
+                    <h2 class="criteriaTitle">Creativity</h2>
+                    <p>How well your project demonstrates innovation outside the norm</p>
+                </div>
+                <div class="criteria">
+                    <h2 class="criteriaTitle">Technicality</h2>
+                    <p>How well your project demonstrates quality design and structure, as well as how well presenters demonstrate an understanding of said structure</p>
+                </div>
+                <div class="criteria">
+                    <h2 class="criteriaTitle">Relevance</h2>
+                    <p>How well your project adheres to the theme and shows potential societal applicability</p>
+                </div>
+                <div class="criteria">
+                    <h2 class="criteriaTitle">Presentation</h2>
+                    <p>How well your project is presented—is it clear and compelling?</p>
+                </div>
             </div>
-            <div class="criteria">
-                <h2 class="criteriaTitle">Relevance</h2>
-                <p>How well your project adheres to the theme and shows potential societal applicability</p>
-            </div>
-            <div class="criteria">
-                <h2 class="criteriaTitle">Presentation</h2>
-                <p>How well your project is presented—is it clear and compelling?</p>
-            </div>
-        </div>
-        <div id="faq">
+            <div id="faq">
 
-        </div>
+            </div>
+        </main>
+        
     </body>
 </html>

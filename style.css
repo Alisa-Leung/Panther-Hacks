@@ -44,9 +44,8 @@ a:hover{
     text-decoration-line: underline;
     text-decoration-style: wavy;
 }
-li{
-    float: left;
-    font-size: var(--lg);
+#navBarContainer{  
+    align-items: center;
 }
 #navBar{
     background-color: var(--red1);
@@ -68,6 +67,7 @@ li{
     text-align: center;
     position: relative;
     opacity: 80%;
+    font-size: var(--lg);
 }
 #navLink::after{
     content: "";
@@ -86,4 +86,9 @@ li{
 }
 #navLink:hover{
     opacity: 100%
+}
+#navLogo{
+    height: var(--xxl);
+    position: fixed;
+    z-index: 1;
 }
