@@ -89,6 +89,10 @@ a:hover{
 }
 #navLogo{
     height: var(--xxl);
-    position: fixed;
+    position: relative;
     z-index: 1;
+    opacity: 80%;
+}
+#navLogo:hover{
+    opacity: 100%
 }
