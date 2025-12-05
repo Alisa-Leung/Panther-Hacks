@@ -32,6 +32,9 @@ p{
     font-weight: normal;
     font-family: var(--courier);
 }
+h1{
+    font-size: 75px;
+}
 
 /*navbar styling*/
 a{
@@ -46,6 +49,7 @@ a:hover{
 }
 #navBarContainer{  
     align-items: center;
+    z-index: 3;
 }
 #navBar{
     background-color: var(--red1);
@@ -59,6 +63,7 @@ a:hover{
     display: flex;
     gap: var(--lg);
     justify-content: right;
+    text-align: center;
 }
 #navLink{
     color: var(--white);
@@ -85,14 +90,53 @@ a:hover{
     width: 100%;
 }
 #navLink:hover{
-    opacity: 100%
+    opacity: 100%;
 }
 #navLogo{
     height: var(--xxl);
     position: relative;
-    z-index: 1;
     opacity: 80%;
 }
 #navLogo:hover{
-    opacity: 100%
+    opacity: 100%;
+}
+#background{
+    margin-top: 85px;
+    width: 100%;
+    position:relative;
+    opacity: 50%;
+    z-index: -2;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+/*home page*/
+#home{
+    position: absolute;
+    z-index: -1;
+    top:40%;
+    left:0;
+    right: 0;
+    text-align: center;
+    /*find some way to blur background so text is readable*/
+}
+#register{
+    text-decoration: none;
+    margin-top: var(--md);
+    border: none;
+    border-radius: var(--sm);
+    padding: var(--lg);
+    background-color: var(--red1);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    box-shadow: inset 0 0 0 0 var(--red1);
+    color: var(--white);
+    font-size: var(--md);
+    font-weight: bold;
+    transition: ease-out 0.3s;
+    z-index: 7;
+}
+#register:hover{
+    cursor: pointer;
+    box-shadow: inset 136px 0 0 0 var(--white);
+    color: var(--red1);
 }
