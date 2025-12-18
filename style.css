@@ -42,6 +42,7 @@ a{
     color: var(--red1);
     text-decoration: none;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 a:hover{
     color: var(--red1);
@@ -49,22 +50,22 @@ a:hover{
     text-decoration-style: wavy;
 }
 #navBarContainer{  
-    align-items: center;
-}
-#navBar{
-    background-color: var(--red1);
     position: fixed;
-    list-style-type: none;
-    padding: var(--lg);
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10;
+}
+#navBar{
+    background-color: var(--red1);
+    list-style-type: none;
+    padding: var(--lg);
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     display: flex;
     gap: var(--lg);
     justify-content: right;
     text-align: center;
-    z-index: 10;
+    align-items: center;
 }
 #navLink{
     color: var(--white);
@@ -85,7 +86,7 @@ a:hover{
     background-color: var(--white);
     background-size: 2px 2px;
     background-repeat: repeat-x;
-    transition: width 0.3s ease;
+    transition: width 0.3s ease, opacity 0.3s ease;
 }
 #navLink:hover::after{
     width: 100%;
@@ -95,16 +96,24 @@ a:hover{
 }
 #navLogo{
     height: var(--xxl);
-    position: relative;
     opacity: 80%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: var(--md);
+    z-index: 11; 
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease;
 }
+
 #navLogo:hover{
+    cursor: pointer;
     opacity: 100%;
+    transform: translateY(calc(-50% - 2px)) scale(1.03);
 }
 #background{
     margin-top: 85px;
     width: 100%;
-    position:relative;
+    position: relative;
     opacity: 50%;
     z-index: -3;
     background-color: rgba(255, 255, 255, 0.3);
@@ -118,6 +127,7 @@ a:hover{
     left:0;
     right: 0;
     text-align: center;
+    justify-content: center;
 }
 #register{
     text-decoration: none;
@@ -131,11 +141,26 @@ a:hover{
     color: var(--white);
     font-size: var(--md);
     font-weight: bold;
-    transition: ease-out 0.3s;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.3s ease;
 }
 #register:hover{
     cursor: pointer;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), inset 165px 0 0 0 var(--white);
     color: var(--red1);
     border-color: var(--white);
+    transform: translateY(-5px) scale(1.03);
 }
+#downArrow{
+    display: flex;
+    position: absolute;
+    text-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+#downArrow:hover{
+    cursor: pointer;
+    transform: translateY(5px);
+}
+#logisticsTitle{
+    scroll-margin-top: 80px;
+}
+    
