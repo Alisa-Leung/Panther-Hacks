@@ -111,6 +111,29 @@ a:hover{
     opacity: 100%;
     transform: translateY(calc(-50% - 2px)) scale(1.03);
 }
+#navMenu{
+    display: none;
+}
+#navMenu:hover{
+    cursor: pointer;
+    opacity: 100%;
+    transform: translateY(calc(-50% - 2px)) scale(1.03);
+}
+@media screen and (max-width: 640px){
+    #navMenu{
+        height: var(--xxl);
+        opacity: 80%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: var(--md);
+        z-index: 11; 
+        transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease;
+    }
+    #navLink{
+        visibility: hidden;
+    }
+}
 
 /*home page*/
 #homeContainer{
