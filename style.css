@@ -57,12 +57,12 @@ h1{
     right: 0;
     z-index: 10;
     background-color: var(--red1);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.3);
 }
 #navBar{
     background-color: var(--red1);
     list-style-type: none;
     padding: var(--lg);
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     display: flex;
     gap: var(--lg);
     justify-content: right;
@@ -137,13 +137,11 @@ h1{
         flex-direction: column;
         position: fixed;
         right: 0;
-        box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
         background-color: var(--red1);
         width: 100%;
         max-height: 0;
         overflow: hidden;
         padding: 0;
-        transition: max-height 0.3s ease, padding 0.3s ease;
     }
     #navBar.active {
         max-height: 500px;
@@ -168,6 +166,7 @@ h1{
         z-index: 10;
         padding-top: 63px;
         background-color: var(--red1);
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.3);
     }
 }
 
