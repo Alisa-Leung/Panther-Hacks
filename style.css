@@ -39,13 +39,13 @@ h1{
 }
 
 /*navbar styling*/
-a{
+.curlyLink{
     color: var(--red1);
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease;
 }
-a:hover{
+.curlyLink:hover{
     color: var(--red1);
     text-decoration-line: underline;
     text-decoration-style: wavy;
@@ -56,6 +56,7 @@ a:hover{
     left: 0;
     right: 0;
     z-index: 10;
+    background-color: var(--red1);
 }
 #navBar{
     background-color: var(--red1);
@@ -68,7 +69,7 @@ a:hover{
     text-align: center;
     align-items: center;
 }
-#navLink{
+.navLink{
     color: var(--white);
     text-decoration: none;
     display: inline-block;
@@ -77,7 +78,7 @@ a:hover{
     opacity: 80%;
     font-size: var(--lg);
 }
-#navLink::after{
+.navLink::after{
     content: "";
     position:absolute;
     width: 0;
@@ -89,10 +90,10 @@ a:hover{
     background-repeat: repeat-x;
     transition: width 0.3s ease, opacity 0.3s ease;
 }
-#navLink:hover::after{
+.navLink:hover::after{
     width: 100%;
 }
-#navLink:hover{
+.navLink:hover{
     opacity: 100%;
 }
 #navLogo{
@@ -119,19 +120,54 @@ a:hover{
     opacity: 100%;
     transform: translateY(calc(-50% - 2px)) scale(1.03);
 }
-@media screen and (max-width: 640px){
+@media screen and (max-width: 650px){
     #navMenu{
+        display: block;
         height: var(--xxl);
         opacity: 80%;
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
         right: var(--md);
         z-index: 11; 
+        transform: translateY(-50%);
         transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease;
     }
-    #navLink{
-        visibility: hidden;
+    #navBar {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+        background-color: var(--red1);
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    #navBar.active {
+        max-height: 500px;
+        padding: var(--lg) 0;
+    }
+    .navLink{
+        visibility: visible;
+    }
+    .navLink.active{
+        display: inline-block;
+    }
+    .navLink {
+        padding: var(--md);
+        display: block;
+        visibility: visible;
+    }
+    #navBarContainer{  
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        padding-top: 63px;
+        background-color: var(--red1);
     }
 }
 
@@ -177,6 +213,7 @@ a:hover{
     margin: 0 auto clamp(12px, 2vw, var(--lg));
     line-height: 1.6;
     width: 90%;
+    font-weight: bold;
 }
 #register{
     text-decoration: none;
