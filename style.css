@@ -184,7 +184,7 @@ h1{
     align-items: center;
 }
 #background{
-    opacity: 50%;
+    opacity: 30%;
     height: 100%;
     object-fit: cover;
 }
@@ -216,7 +216,11 @@ h1{
     width: 90%;
     font-weight: bold;
 }
+#homeButtons{
+    padding: var(--md);
+}
 #register{
+    display: inline-block;
     text-decoration: none;
     margin-top: clamp(8px, 1.5vw, var(--md));
     border: none;
@@ -237,6 +241,28 @@ h1{
     border-color: var(--white);
     transform: translateY(-5px) scale(1.03);
 }
+#donate{
+    display: inline-block;
+    text-decoration: none;
+    margin-top: clamp(8px, 1.5vw, var(--md));
+    border: none;
+    border-radius: var(--sm);
+    padding: clamp(12px, 1.8vw, var(--lg));
+    background-color: var(--white);
+    border-color: var(--white);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), inset 0 0 0 0 var(--white);
+    color: var(--red1);
+    font-size: clamp(0.9rem, 1.5vw, var(--md));
+    font-weight: bold;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.3s ease;
+}
+#donate:hover{
+    cursor: pointer;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), inset 165px 0 0 0 var(--red1);
+    color: var(--white);
+    border-color: var(--red1);
+    transform: translateY(-5px) scale(1.03);
+}
 #downArrow{
     display: flex;
     position: relative;
@@ -251,10 +277,54 @@ h1{
 }
 
 /*logistics section*/
+#logistics{
+    max-width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 #logisticsTitle{
     scroll-margin-top: 80px;
     color: var(--red1);
     display: flex;
     justify-content: center;
-    font-size: var(--xl);
+    font-size: var(--xxl);
+}
+#schedule{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.scheduleItem{
+    border-radius: var(--sm);
+    border: 2px solid rgb(196, 29, 29, 0.8);
+    padding: var(--md);
+    margin: var(--md);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.scheduleItem:hover{
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+.time{
+    color: rgb(196, 29, 29, 0.6);
+}
+.scheduleEvent{
+
+}
+
+/*animations*/
+@keyframes fadeIn{
+    0%{
+        transform: translateY(25%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.fadeOnLoad{
+    animation: 1s fadeIn;
 }
