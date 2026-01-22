@@ -278,21 +278,67 @@ h1{
 
 /*about section*/
 #about{
-    scroll-margin-top: 80px;
-    max-width: 75%;
+    scroll-margin-top: 120px;
+    width: 100%;
     display: flex;
-    margin: 0 auto;
     flex-direction: column;
+    text-align: center;
+    margin-top: var(--xl);
+    background-image: linear-gradient(
+        var(--red1),
+        var(--red1) 40px,
+        var(--red2) 40px,
+        var(--red2) 40px,
+        var(--red3) 40px,
+        var(--red3) 120px
+    );
 }
 #aboutItemContainer{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+}
+@media screen and (max-width: 520px){
+    #aboutItemContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 #aboutTitle{
-    color: var(--red1);
+    color: var(--black);
     display: flex;
     justify-content: center;
-    font-size: var(--xxl);
+    font-size: clamp(20px, 40px, 40px);
+    max-height: var(--xxxl);
+    margin-bottom: var(--xl);
+}
+.aboutItem{
+    flex: 1;
+    border-radius: var(--sm);
+    border: 2px solid var(--white);
+    max-width: 25%;
+    height: 50vh;
+    padding: var(--md);
+    margin-right: clamp(var(--sm), var(--xl), var(--xl));
+    margin-left: clamp(var(--sm), var(--xl), var(--xl));
+}
+.aboutImage{
+    display: block;
+    margin: 0 auto;
+    width: clamp(50px, 75px, 75px);
+}
+.aboutDescription{
+    display: flex;
+    text-align: center;
+    color: var(--white);
+    opacity: 80%;
+    font-size: clamp(12px, 16px, 16px);
+    max-width: 100%;
+}
+.aboutItemTitle{
+    display: flex;
+    justify-content: center;
 }
 
 /*logistics section*/
@@ -303,6 +349,7 @@ h1{
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+    margin-top: var(--xl);
 }
 #logisticsTitle{
     color: var(--red1);
