@@ -2,6 +2,8 @@
 :root{
     /*colors*/
     --black: #2b162f;
+    --purple1: #aa8fb0;
+    --purple2: #663b6e;
     --white: #f8eedf;
     --red1: #c41d1d;
     --red2:#8E1616;
@@ -17,13 +19,14 @@
 
     /*fonts*/
     --google: "Google Sans Code";
-    --courier: "Courier New";
+    --cascadia: "Cascadia Code";
+    --trebuchet: "Trebuchet MS";
 }
 *{
     margin: 0px;
     padding: 0px;
     scroll-behavior: smooth;
-    font-family: var(--courier);
+    font-family: var(--cascadia);
 }
 body{
     background-color: var(--white);
@@ -33,7 +36,7 @@ body{
 }
 p{
     font-weight: normal;
-    font-family: var(--courier);
+    font-family: var(--trebuchet);
 }
 h1{
     font-size: 75px;
@@ -41,6 +44,7 @@ h1{
 
 /*navbar styling*/
 .curlyLink{
+    font-family: var(--trebuchet);
     color: var(--red1);
     text-decoration: none;
     font-weight: bold;
@@ -78,6 +82,7 @@ h1{
     position: relative;
     opacity: 80%;
     font-size: var(--lg);
+    font-family: var(--trebuchet);
 }
 .navLink::after{
     content: "";
@@ -232,6 +237,7 @@ h1{
     color: var(--white);
     font-size: clamp(0.9rem, 1.5vw, var(--md));
     font-weight: bold;
+    font-family: var(--trebuchet);
     transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.3s ease;
 }
 #register:hover{
@@ -248,19 +254,20 @@ h1{
     border: none;
     border-radius: var(--sm);
     padding: clamp(12px, 1.8vw, var(--lg));
-    background-color: var(--white);
+    background-color: var(--purple1);
     border-color: var(--white);
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), inset 0 0 0 0 var(--white);
-    color: var(--red1);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), inset 0 0 0 0 var(--purple2);
+    color: var(--black);
     font-size: clamp(0.9rem, 1.5vw, var(--md));
     font-weight: bold;
+    font-family: var(--trebuchet);
     transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.3s ease;
 }
 #donate:hover{
     cursor: pointer;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), inset 165px 0 0 0 var(--red1);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), inset 165px 0 0 0 var(--purple2);
     color: var(--white);
-    border-color: var(--red1);
+    border-color: var(--purple2);
     transform: translateY(-5px) scale(1.03);
 }
 #downArrow{
@@ -279,12 +286,19 @@ h1{
 /*about section*/
 #about{
     scroll-margin-top: 120px;
-    width: 100%;
+    width: 100;
     display: flex;
     flex-direction: column;
     text-align: center;
     margin-top: var(--xl);
-    padding: var(--md);
+}
+#aboutItemContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--md);
+    margin: 0 auto;
+    max-width: 100%;
     background-image: linear-gradient(to bottom,
         var(--white) 0%,
         var(--white) 25%,
@@ -295,22 +309,7 @@ h1{
         var(--red3) 75%,
         var(--red3) 100%
     );
-}
-#aboutItemContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-@media screen and (max-width: 520px){
-    #aboutItemContainer{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .aboutItem{
-        max-width: 100%;
-        margin: var(--md) auto;
-    }
+    padding: var(--md);
 }
 #aboutTitle{
     color: var(--black);
@@ -323,15 +322,21 @@ h1{
 .aboutItem{
     display: flex;
     flex-direction: column;
-    flex: 1;
     border-radius: var(--sm);
-    border: 2px solid var(--white);
+    border: 2px solid rgb(196, 29, 29, 0.8);
     max-width: 25%;
-    height: 50vh;
+    height: auto;
     padding: var(--md);
-    background-color: var(--black);
+    background-color: var(--white);
     justify-content: center;
     overflow: hidden;
+    flex: 1;
+    min-width: 0;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.aboutItem:hover{
+    transform: translateY(-4px);
 }
 .aboutImage{
     display: block;
@@ -341,14 +346,28 @@ h1{
 .aboutDescription{
     display: flex;
     text-align: center;
-    color: var(--white);
+    color: var(--black);
     opacity: 80%;
     font-size: clamp(8px, 16px, 16px);
     max-width: 100%;
+    font-weight: bold;
 }
 .aboutItemTitle{
     display: flex;
     justify-content: center;
+    color: var(--black);
+}
+@media screen and (max-width: 550px){
+    #aboutItemContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .aboutItem{
+        width: 100%;
+        max-width: 75%;
+    }
 }
 
 /*logistics section*/
@@ -390,9 +409,11 @@ h1{
 }
 .time{
     color: rgb(196, 29, 29, 0.6);
+    font-family: var(--trebuchet);
 }
 .scheduleEvent{
     font-size: var(--lg);
+    font-family: var(--trebuchet);
 }
 .paw{
     margin: 0 auto;
