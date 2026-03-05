@@ -209,7 +209,6 @@ h1{
 }
 #home h1{
     font-size: clamp(3rem, 6vw, 75px);
-    /*might want to edit font to appear bigger on mobile*/
     line-height: 1.2;
     margin-bottom: clamp(8px, 1.5vw, var(--md));
     margin-left: auto;
@@ -395,7 +394,7 @@ h1{
     color: var(--white);
     display: flex;
     justify-content: center;
-    font-size: var(--xxl);
+    font-size: clamp(1rem, 40px, 40px);
 }
 #schedule{
     display: flex;
@@ -436,16 +435,46 @@ h1{
     display: flex;
     flex-direction: column;
     background-color: var(--red3);
+    scroll-margin: 75px;
 }
 #teamTitle{
     color: var(--white);
     display: flex;
     justify-content: center;
-    font-size: var(--xxl);
+    font-size: clamp(1rem, 40px, 40px);
+    margin: var(--md);
 }
 #teamContainer{
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    background-image: linear-gradient(to top,
+        var(--white) 0%,
+        var(--white) 25%,
+        var(--red1) 25%,
+        var(--red1) 50%,
+        var(--red2) 50%,
+        var(--red2) 75%, 
+        var(--red3) 75%,
+        var(--red3) 100%
+    );
+}
+.profileContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 20vw;
+    text-align: center;
+    background-color: var(--white);
+    border-radius: var(--sm);
+    border: 2px solid rgb(196, 29, 29, 0.8);
+    padding: var(--md);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.profileContainer:hover{
+    transform: translateY(-4px);
 }
 
 /*animations*/
