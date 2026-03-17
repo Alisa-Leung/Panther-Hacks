@@ -499,25 +499,16 @@ h1{
     font-size: clamp(1rem, 2vw, var(--xl));
     text-decoration: none;
 }
+.name:hover{
+    color: var(--red1);
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
 .role{
     display: flex;
     justify-content: center;
     color: var(--purple2);
     font-size: clamp(0.875rem, 1.5vw, var(--md));
-}
-
-/*criteria*/
-.criteria{
-    display: flex;
-    flex-direction: row;
-}
-.criteriaTitle{
-    border: 2px solid rgb(196, 29, 29, 0.8);
-    padding: var(--md);
-    border-radius: var(--sm);
-}
-.criteriaDescription{
-
 }
 
 /*animations*/
