@@ -511,6 +511,45 @@ h1{
     font-size: clamp(0.875rem, 1.5vw, var(--md));
 }
 
+/*sponsors*/
+#sponsors{
+    scroll-margin-top: 100px;
+    width: 100;
+    flex-direction: column;
+    text-align: center;
+    margin-top: var(--xl);
+}
+#sponsorTitle{
+    color: var(--black);
+    display: flex;
+    justify-content: center;
+    font-size: clamp(1rem, 40px, 40px);
+    margin-bottom: var(--xl);
+}
+#sponsor{
+    display: inline-block;
+    text-decoration: none;
+    margin-top: clamp(8px, 1.5vw, var(--md));
+    border: none;
+    border-radius: var(--sm);
+    padding: clamp(12px, 1.8vw, var(--lg));
+    background-color: var(--red1);
+    border-color: var(--red1);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), inset 0 0 0 0 var(--red1);
+    color: var(--white);
+    font-size: clamp(0.9rem, 1.5vw, var(--md));
+    font-weight: bold;
+    font-family: var(--trebuchet);
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.3s ease;
+}
+#sponsor:hover{
+    cursor: pointer;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), inset 165px 0 0 0 var(--red4);
+    color: var(--red3);
+    border-color: var(--red4);
+    transform: translateY(-5px) scale(1.03);
+}
+
 /*animations*/
 @keyframes fadeIn{
     0%{
