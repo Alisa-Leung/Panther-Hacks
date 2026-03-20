@@ -324,17 +324,16 @@ h1{
     justify-content: center;
     font-size: clamp(1rem, 40px, 40px);
     margin-bottom: var(--xl);
-    /*may have to mess around with margins, the image is no longer up to scale in the correct way*/
 }
 .aboutItem{
     display: flex;
     flex-direction: column;
     border-radius: var(--sm);
-    border: 2px solid rgb(196, 29, 29, 0.8);
     max-width: 25%;
     height: auto;
     padding: var(--md);
     background-color: var(--white);
+    border: 2px solid rgb(196, 29, 29, 0.8);
     justify-content: center;
     overflow: hidden;
     flex: 1;
@@ -405,7 +404,6 @@ h1{
 }
 .scheduleItem{
     border-radius: var(--sm);
-    border: 2px solid rgb(196, 29, 29, 0.8);
     padding: var(--md);
     margin: var(--md);
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
@@ -450,8 +448,8 @@ h1{
     flex-direction: row;
     justify-content: space-evenly;
     background-image: linear-gradient(to top,
-        var(--white) 0%,
-        var(--white) 25%,
+        var(--red1) 0%,
+        var(--red1) 25%,
         var(--red1) 25%,
         var(--red1) 50%,
         var(--red2) 50%,
@@ -548,6 +546,105 @@ h1{
     color: var(--red3);
     border-color: var(--red4);
     transform: translateY(-5px) scale(1.03);
+}
+
+/*faq*/
+/*
+#faq{
+    scroll-margin-top: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#faqContainer{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    max-width: 75%;
+    gap: var(--sm);
+    padding: var(--md);
+}
+#faqTitle{
+    color: var(--black);
+    display: flex;
+    justify-content: center;
+    font-size: clamp(1rem, 40px, 40px);
+    margin-bottom: var(--xl);
+}
+.faqItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: var(--md);
+    margin-bottom: var(--md);
+    border-radius: var(--sm);
+    background-color: var(--purple1);
+}
+.question{
+    background-color: var(--purple1);
+    color: var(--black);
+    cursor: pointer;
+    padding: var(--md);
+    width: 100%;
+    border: none;
+    border-radius: var(--sm);
+    text-align: left;
+    outline: none;
+    font-size: var(--lg);
+    font-weight: bold;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.3s ease;
+}
+.active, .question:hover{
+    background-color: var(--purple2);
+    color: var(--white);
+    transform: scale(1.01);
+}
+.answer{
+    padding: 0 var(--md);
+    overflow: hidden;
+    color: var(--black);
+    background-color: var(--purple1);
+    border-radius: var(--sm);
+    font-style: bold;
+    max-height: 0px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    transition: max-height 0.2s ease-out;
+}
+*/
+
+/*footer*/
+#footer{
+    background-color: var(--red1);
+    height: var(--xxxl);
+    padding: var(--md);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#footerText{
+    text-align: center;
+    color: var(--white);
+    font-weight: bold;
+    font-size: var(--lg);
+}
+#footerLinks{
+    display: flex;
+    justify-content: center;
+    gap: var(--md);
+}
+#footer a{
+    color: var(--red4);
+    text-decoration: none;
+    font-weight: bold;
+    padding: var(--md);
+    transition: all 0.3 ease;
+}
+#footer a:hover{
+    color: var(--white);
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
 }
 
 /*animations*/
