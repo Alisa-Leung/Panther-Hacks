@@ -549,7 +549,6 @@ h1{
 }
 
 /*faq*/
-/*
 #faq{
     scroll-margin-top: 75px;
     width: 100%;
@@ -570,6 +569,7 @@ h1{
     justify-content: center;
     font-size: clamp(1rem, 40px, 40px);
     margin-bottom: var(--xl);
+    text-align: center;
 }
 .faqItem{
     display: flex;
@@ -599,6 +599,15 @@ h1{
     color: var(--white);
     transform: scale(1.01);
 }
+.question::after{
+    content: '\002B';
+    font-size: var(--lg);
+    color: var(--white);
+    float: right;
+}
+.active::after{
+    content: '\2212';
+}
 .answer{
     padding: 0 var(--md);
     overflow: hidden;
@@ -612,7 +621,6 @@ h1{
     margin: 0 auto;
     transition: max-height 0.2s ease-out;
 }
-*/
 
 /*footer*/
 #footer{
@@ -638,7 +646,7 @@ h1{
     color: var(--red4);
     text-decoration: none;
     font-weight: bold;
-    padding: var(--md);
+    padding-top: var(--md);
     transition: all 0.3 ease;
 }
 #footer a:hover{

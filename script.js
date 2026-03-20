@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    /*
     for (let i = 0; i < questions.length; i++) {
         questions[i].addEventListener("click", function() {
             this.classList.toggle("active");
@@ -27,5 +26,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    */
 });
