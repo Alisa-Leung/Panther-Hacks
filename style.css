@@ -252,7 +252,7 @@ h1{
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), inset 165px 0 0 0 var(--red4);
     color: var(--red3);
     border-color: var(--red4);
-    transform: translateY(-5px) scale(1.03);
+    transform: translateY(var(--fade-y, 0px)) translateY(-5px);
 }
 #donate{
     display: inline-block;
@@ -275,7 +275,7 @@ h1{
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), inset 165px 0 0 0 var(--purple1);
     color: var(--black);
     border-color: var(--purple1);
-    transform: translateY(-5px) scale(1.03);
+    transform: translateY(var(--fade-y, 0px)) translateY(-5px);
 }
 #downArrow{
     display: flex;
@@ -287,7 +287,7 @@ h1{
 }
 #downArrow:hover{
     cursor: pointer;
-    transform: translateY(5px);
+    transform: translateY(var(--fade-y, 0px)) translateY(5px);
 }
 
 /*about section*/
@@ -307,8 +307,8 @@ h1{
     margin: 0 auto;
     max-width: 100%;
     background-image: linear-gradient(to bottom,
-        var(--white) 0%,
-        var(--white) 25%,
+        var(--red4) 0%,
+        var(--red4) 25%,
         var(--red1) 25%,
         var(--red1) 50%,
         var(--red2) 50%,
@@ -333,7 +333,6 @@ h1{
     height: auto;
     padding: var(--md);
     background-color: var(--white);
-    border: 2px solid rgb(196, 29, 29, 0.8);
     justify-content: center;
     overflow: hidden;
     flex: 1;
@@ -342,7 +341,7 @@ h1{
     transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 .aboutItem:hover{
-    transform: translateY(-4px);
+    transform: translateY(var(--fade-y, 0px)) translateY(-6px);
 }
 .aboutImage{
     display: block;
@@ -404,6 +403,7 @@ h1{
 }
 .scheduleItem{
     border-radius: var(--sm);
+    border-color: var(--red1);
     padding: var(--md);
     margin: var(--md);
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
@@ -411,7 +411,7 @@ h1{
     background-color: var(--white);
 }
 .scheduleItem:hover{
-    transform: translateY(-2px);
+    transform: translateY(var(--fade-y, 0px)) translateY(-6px);
 }
 .time{
     color: var(--purple2);
@@ -448,8 +448,8 @@ h1{
     flex-direction: row;
     justify-content: space-evenly;
     background-image: linear-gradient(to top,
-        var(--red1) 0%,
-        var(--red1) 25%,
+        var(--red4) 0%,
+        var(--red4) 25%,
         var(--red1) 25%,
         var(--red1) 50%,
         var(--red2) 50%,
@@ -469,14 +469,13 @@ h1{
     text-align: center;
     background-color: var(--white);
     border-radius: var(--sm);
-    border: 2px solid rgb(196, 29, 29, 0.8);
     padding: var(--md);
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     height: clamp(350px, 1vh, 1.5vh);
 }
 .profileContainer:hover{
-    transform: translateY(-4px);
+    transform: translateY(var(--fade-y, 0px)) translateY(-6px);
 }
 @media screen and (max-width: 850px){
     #teamContainer{
@@ -538,14 +537,14 @@ h1{
     font-size: clamp(0.9rem, 1.5vw, var(--md));
     font-weight: bold;
     font-family: var(--trebuchet);
-    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 #sponsor:hover{
     cursor: pointer;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), inset 165px 0 0 0 var(--red4);
     color: var(--red3);
     border-color: var(--red4);
-    transform: translateY(-5px) scale(1.03);
+    transform: translateY(var(--fade-y, 0px)) translateY(-5px);
 }
 
 /*faq*/
@@ -579,7 +578,6 @@ h1{
     margin-top: var(--md);
     margin-bottom: var(--md);
     border-radius: var(--sm);
-    background-color: var(--purple1);
 }
 .question{
     background-color: var(--purple1);
@@ -593,12 +591,12 @@ h1{
     outline: none;
     font-size: var(--lg);
     font-weight: bold;
-    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 .active, .question:hover{
     background-color: var(--purple2);
     color: var(--white);
-    transform: scale(1.01);
+    transform: translateY(var(--fade-y, 0px)) translateY(-6px);
 }
 .question::after{
     content: '\002B';
@@ -620,6 +618,7 @@ h1{
     display: flex;
     justify-content: left;
     margin: 0 auto;
+    margin-top: var(--sm);
     transition: max-height 0.2s ease-out;
 }
 .answer p{
@@ -649,7 +648,7 @@ h1{
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), inset 170px 0 0 0 var(--purple1);
     color: var(--black);
     border-color: var(--purple1);
-    transform: translateY(-5px) scale(1.03);
+    transform: translateY(var(--fade-y, 0px)) translateY(-5px);
 }
 
 /*footer*/
@@ -697,14 +696,15 @@ h1{
     }
 }
 .fadeOnLoad{
+    --fade-y: 10px;
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(var(--fade-y)) translateY(var(--hover-y, 0px));
     transition: opacity 0.6s ease, transform 0.6s ease;
     will-change: opacity, transform;
 }
 .fadeOnLoad.isVisible{
+    --fade-y: 0px;
     opacity: 1;
-    transform: translateY(0);
 }
 .delayedFade{
     animation: 0.6s fadeIn ease;
