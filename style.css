@@ -472,7 +472,6 @@ h1{
     padding: var(--md);
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    height: clamp(350px, 1vh, 1.5vh);
 }
 .profileContainer:hover{
     transform: translateY(var(--fade-y, 0px)) translateY(-6px);
