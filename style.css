@@ -41,6 +41,11 @@ p{
 }
 h1{
     font-size: 75px;
+    font-family: var(--trebuchet);
+}
+h2{
+    font-family: var(--trebuchet);
+    font-size: clamp(1rem, 40px, 40px);
 }
 
 /*navbar styling*/
@@ -322,7 +327,6 @@ h1{
     color: var(--black);
     display: flex;
     justify-content: center;
-    font-size: clamp(1rem, 40px, 40px);
     margin-bottom: var(--xl);
 }
 .aboutItem{
@@ -393,7 +397,6 @@ h1{
     color: var(--white);
     display: flex;
     justify-content: center;
-    font-size: clamp(1rem, 40px, 40px);
 }
 #schedule{
     display: flex;
@@ -438,10 +441,9 @@ h1{
 }
 #teamTitle{
     color: var(--white);
-    display: flex;
-    justify-content: center;
-    font-size: clamp(1rem, 40px, 40px);
+    display: block;
     margin: var(--md);
+    text-align: center;
 }
 #teamContainer{
     display: flex;
@@ -519,7 +521,6 @@ h1{
     color: var(--black);
     display: flex;
     justify-content: center;
-    font-size: clamp(1rem, 40px, 40px);
     margin-bottom: var(--xl);
 }
 #sponsor{
@@ -566,8 +567,8 @@ h1{
     color: var(--black);
     display: flex;
     justify-content: center;
-    font-size: clamp(1rem, 40px, 40px);
-    margin-bottom: var(--xl);
+    margin-bottom: var(--lg);
+    margin-top: var(--lg);
     text-align: center;
 }
 .faqItem{
