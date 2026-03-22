@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (answer.style.maxHeight) {
                 answer.style.maxHeight = null;
             } else {
-                answer.style.maxHeight = answer.scrollHeight + "px";
+                answer.style.maxHeight = (answer.scrollHeight + 16) + "px";
             }
         });
     }
