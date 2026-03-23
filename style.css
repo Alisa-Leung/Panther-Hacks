@@ -675,6 +675,7 @@ h2{
     display: flex;
     justify-content: center;
     gap: var(--md);
+    font-family: var(--trebuchet);
 }
 #footer a{
     color: var(--red4);
