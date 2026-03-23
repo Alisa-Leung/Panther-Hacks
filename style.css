@@ -675,13 +675,13 @@ h2{
     display: flex;
     justify-content: center;
     gap: var(--md);
-    font-family: var(--trebuchet);
 }
 #footer a{
     color: var(--red4);
     text-decoration: none;
     font-weight: bold;
     padding-top: var(--md);
+    font-family: var(--trebuchet);
     transition: all 0.3 ease;
 }
 #footer a:hover{
