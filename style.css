@@ -222,9 +222,11 @@ h2{
 }
 #panther{
     color: var(--red1);
+    font-family: var(--trebuchet);
 }
 #hacks{
     color: var(--purple2);
+    font-family: var(--trebuchet);
 }
 #home p{
     font-size: clamp(0.9rem, 1.8vw, 1.25rem);
@@ -496,6 +498,7 @@ h2{
     color: var(--black);
     font-size: clamp(1rem, 2vw, var(--xl));
     text-decoration: none;
+    font-family: var(--trebuchet);
 }
 .name:hover{
     color: var(--red1);
@@ -507,6 +510,7 @@ h2{
     justify-content: center;
     color: var(--purple2);
     font-size: clamp(0.875rem, 1.5vw, var(--md));
+    font-family: var(--trebuchet);
 }
 
 /*sponsors*/
@@ -591,6 +595,7 @@ h2{
     outline: none;
     font-size: var(--lg);
     font-weight: bold;
+    font-family: var(--trebuchet);
     transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 .active, .question:hover{
