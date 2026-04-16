@@ -519,13 +519,14 @@ h2{
     width: 100;
     flex-direction: column;
     text-align: center;
-    margin-top: var(--xl);
+    padding-top: var(--xl);
+    background-color: var(--red4);
+    padding-bottom: var(--xl);
 }
 #sponsorTitle{
     color: var(--black);
     display: flex;
     justify-content: center;
-    margin-bottom: var(--xl);
 }
 #sponsor{
     display: inline-block;
@@ -549,6 +550,29 @@ h2{
     color: var(--red3);
     border-color: var(--red4);
     transform: translateY(var(--fade-y, 0px)) translateY(-5px);
+}
+#sponsorLogosContainer{
+    display: flex;
+    justify-content: center;
+}
+#sponsorLogos{
+    overflow: wrap;
+    gap: 2rem;
+}
+.sponsorLogo{
+    margin: var(--md);
+    height: clamp(50px, 100px, 100px);
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.sponsorLogo:hover{
+    transform: translateY(var(--fade-y, 0px)) translateY(-6px);
+    cursor: pointer;
+}
+#sponsorMessage{
+    color: var(--purple2);
+    font-weight: bold;
+    font-size: var(--lg);
+    padding: var(--lg);
 }
 
 /*faq*/
